@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أثيرا التعليمية | تعلم للمستقبل</title>
+    <style>
+        /* تنسيقات عامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* القائمة العلوية */
+        header {
+            background-color: #1a237e;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffeb3b;
+        }
+        .btn-login {
+            background-color: #00e676;
+            color: #1a237e;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* القسم الترحيبي (Hero Section) */
+        .hero {
+            background: linear-gradient(135deg, #1a237e, #3949ab);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .btn-start {
+            background-color: #ffeb3b;
+            color: #1a237e;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* أقسام المحتوى */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a237e;
+        }
+
+        /* الكورسات والمميزات */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img {
+            height: 180px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-size: 18px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #1a237e;
+        }
+        .card-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .card-footer {
+            padding: 15px 20px;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .btn-enroll {
+            background-color: #3949ab;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* تواصل معنا */
+        .contact-form {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-submit {
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">أثيرا المدرسية</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#courses">الكورسات</a>
+            <a href="#features">مميزاتنا</a>
+            <a href="#contact">تواصل معنا</a>
+            <a href="#" class="btn-login">تسجيل الدخول</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>طريقك نحو احتراف المعرفة من مكانك</h1>
+        <p>انضم إلى أكثر من 50 ألف طالب يتعلمون مهارات المستقبل على أيدي أفضل الخبراء والمعلمين الدوليين.</p>
+        <a href="#courses" class="btn-start">ابدأ التعلم الآن</a>
+    </section>
+
+    <div class="container" id="courses">
+        <h2 class="section-title">أحدث الكورسات المتاحة</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-img">صورة الكورس (برمجة)</div>
+                <div class="card-content">
+                    <h3>دورة تطوير المواقع المتكاملة</h3>
+                    <p>تعلم HTML, CSS, JavaScript وبناء مواقع حقيقية من الصفر حتى الاحتراف.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">49$</span>
+                    <a href="#" class="btn-enroll">اشترك الآن</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">صورة الكورس (تصميم)</div>
+                <div class="card-content">
+                    <h3>أساسيات تصميم واجهات المستخدم UI/UX</h3>
+                    <p>اكتشف أسرار التصميم الجذاب وتجربة المستخدم المميزة باستخدام برنامج Figma.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">39$</span>
+                    <a href="#" class="btn-enroll">اشترك الآن</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">صورة الكورس (ذكاء اصطناعي)</div>
+                <div class="card-content">
+                    <h3>مقدمة في الذكاء الاصطناعي</h3>
+                    <p>فهم الآلة، شبكات الأعصاب الاصطناعية، وكيف تغير هذه التقنيات عالمنا اليوم.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="price">مجاني</span>
+                    <a href="#" class="btn-enroll">اشترك الآن</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
+
+    <div class="container" id="contact">
+        <h2 class="section-title">هل لديك أي استفسار؟ تواصل معنا</h2>
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك هنا">
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com">
+            </div>
+            <div class="form-group">
+                <label for="message">رسالتك</label>
+                <textarea id="message" name="message" rows="5" required placeholder="اكتب استفسارك هنا..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">إرسال الرسالة</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 | منصة أثيرا التعليمية</p>
+    </footer>
+
+</body>
+</html>
